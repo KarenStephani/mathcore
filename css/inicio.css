@@ -1,0 +1,552 @@
+/* ================= VARIABLES INSTITUCIONALES ================= */
+:root {
+    --navy-950: #0a1728;
+    --navy-900: #0F2137;
+    --navy-800: #1b2a4a;
+    --gold: #D4AC0D;
+    --gold-light: #F7DC6F;
+    --gold-hover: #B7950B;
+    --bg-page: #f1f5f9;
+    --text-main: #1e293b;
+    --text-muted: #475569;
+    --white: #ffffff;
+    --shadow-relief: 0 10px 30px -5px rgba(15, 33, 55, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 18px 35px -8px rgba(15, 33, 55, 0.14);
+}
+
+/* ================= RESET Y BASE ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================= CABECERA Y MENÚ (FLEXBOX) ================= */
+.navbar {
+    background-color: var(--navy-900);
+    border-bottom: 2px solid rgba(212, 172, 13, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Zona del Logo */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.brand-logo-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--navy-950);
+    border: 1.5px solid rgba(212, 172, 13, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+}
+
+.brand-logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.text-gold {
+    color: var(--gold);
+    font-weight: 400;
+}
+
+.brand-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    color: #94a3b8;
+    font-weight: 700;
+    margin-top: 3px;
+}
+
+/* Menú de enlaces */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(10, 23, 40, 0.65);
+    padding: 6px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 9px 14px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link.active {
+    background-color: var(--gold);
+    color: var(--navy-950);
+    box-shadow: 0 0 15px rgba(212, 172, 13, 0.4);
+}
+
+.menu-toggle {
+    display: none;
+    background: var(--navy-800);
+    color: var(--gold);
+    border: 1px solid rgba(212, 172, 13, 0.4);
+    font-size: 1.4rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ================= SECCIÓN HERO ================= */
+.hero-section {
+    background-color: var(--navy-900);
+    background-image: 
+        radial-gradient(rgba(212, 172, 13, 0.14) 1px, transparent 1px),
+        radial-gradient(rgba(255, 255, 255, 0.05) 1px, var(--navy-900) 1px);
+    background-size: 36px 36px;
+    background-position: 0 0, 18px 18px;
+    color: var(--white);
+    padding: 60px 0;
+    border-bottom: 3px solid var(--gold);
+}
+
+.hero-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.badge-nivel {
+    display: inline-block;
+    background-color: rgba(212, 172, 13, 0.15);
+    border: 1px solid rgba(212, 172, 13, 0.45);
+    color: var(--gold-light);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 6px 14px;
+    border-radius: 50px;
+    margin-bottom: 18px;
+}
+
+.hero-title {
+    font-size: 2.75rem;
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 16px;
+}
+
+.text-gold-gradient {
+    color: var(--gold);
+}
+
+.hero-lead {
+    font-size: 1.15rem;
+    color: #e2e8f0;
+    max-width: 780px;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.welcome-box {
+    background: rgba(10, 23, 40, 0.75);
+    border-left: 4px solid var(--gold);
+    padding: 20px 24px;
+    border-radius: 0 14px 14px 0;
+    max-width: 820px;
+    margin-bottom: 28px;
+    color: #cbd5e1;
+    font-size: 0.98rem;
+}
+
+.welcome-greeting {
+    font-weight: 800;
+    color: var(--white);
+    font-size: 1.08rem;
+    margin-bottom: 6px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.92rem;
+    padding: 13px 24px;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--gold);
+    color: var(--navy-950);
+    box-shadow: 0 4px 18px rgba(212, 172, 13, 0.35);
+}
+
+.btn-secondary {
+    background-color: var(--navy-800);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ================= CONTENIDO CENTRAL (DOS COLUMNAS FLEXBOX) ================= */
+.main-content-section {
+    padding: 50px 0;
+}
+
+.content-columns {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.col-left {
+    flex: 1.25;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.col-right {
+    flex: 1;
+}
+
+/* Tarjetas en Alto Relieve */
+.card-relief {
+    background-color: var(--white);
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    box-shadow: var(--shadow-relief);
+    transition: box-shadow 0.3s ease;
+}
+
+.card-relief:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 16px;
+    margin-bottom: 18px;
+}
+
+.icon-badge {
+    width: 44px;
+    height: 44px;
+    background-color: var(--navy-900);
+    color: var(--gold);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.card-header h2 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--navy-900);
+}
+
+.card-intro {
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+.learning-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.learning-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: #f8fafc;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+}
+
+.check-dot {
+    background-color: var(--navy-900);
+    color: var(--gold);
+    font-weight: 900;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.motivation-banner {
+    background-color: #fef9e7;
+    border: 1px solid #f7dc6f;
+    color: #7d6608;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Lista de Docentes */
+.group-tag {
+    display: inline-block;
+    background-color: var(--gold);
+    color: var(--navy-950);
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-top: 2px;
+}
+
+.teachers-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.teachers-list li {
+    padding: 10px 14px;
+    background-color: #f8fafc;
+    border-left: 3px solid var(--navy-900);
+    border-radius: 6px;
+    font-size: 0.88rem;
+    color: var(--text-main);
+}
+
+.teachers-list li strong {
+    color: var(--navy-900);
+}
+
+/* ================= PANEL DERECHO: ESTRUCTURA DEL CURSO (4 MÓDULOS) ================= */
+.structure-panel {
+    background-color: var(--navy-900);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 28px;
+    border: 1px solid rgba(212, 172, 13, 0.35);
+    box-shadow: 0 20px 40px -10px rgba(15, 33, 55, 0.25);
+}
+
+.structure-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.structure-header h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.module-count {
+    background-color: rgba(212, 172, 13, 0.2);
+    color: var(--gold-light);
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(212, 172, 13, 0.4);
+}
+
+.modules-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.module-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 16px;
+    border-radius: 14px;
+    transition: all 0.25s ease;
+}
+
+.module-card:hover {
+    background-color: rgba(255, 255, 255, 0.11);
+    border-color: var(--gold);
+    transform: translateX(4px);
+}
+
+.module-number {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: rgba(212, 172, 13, 0.2);
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.95rem;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.module-details h4 {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.module-details p {
+    color: #cbd5e1;
+    font-size: 0.84rem;
+    line-height: 1.45;
+}
+
+/* ================= PIE DE PÁGINA ================= */
+.footer {
+    background-color: var(--navy-950);
+    color: #94a3b8;
+    border-top: 2px solid rgba(212, 172, 13, 0.25);
+    padding: 26px 0;
+    text-align: center;
+}
+
+.footer-main {
+    color: #e2e8f0;
+    font-weight: 700;
+    font-size: 0.88rem;
+    margin-bottom: 4px;
+}
+
+.footer-sub {
+    font-size: 0.78rem;
+}
+
+/* ================= DISEÑO ADAPTABLE (RESPONSIVE FLEXBOX) ================= */
+@media (max-width: 960px) {
+    .content-columns {
+        flex-direction: column;
+    }
+
+    .col-left, .col-right {
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 12px;
+        background-color: var(--navy-950);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-link {
+        text-align: left;
+        padding: 12px 16px;
+    }
+}

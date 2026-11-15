@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos Básicos II: Tipos de Fracciones | MathCore Fracciones</title>
+    <!-- Tipografías académicas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos exclusiva de Conceptos Básicos II -->
+    <link rel="stylesheet" href="css/conceptos2.css">
+</head>
+<body>
+
+    <!-- ================= CABECERA / NAVEGACIÓN ================= -->
+    <header class="navbar">
+        <div class="container navbar-content">
+            <!-- Zona del Logo Institucional -->
+            <a href="index.html" class="brand">
+                <div class="brand-logo-box">
+                    <img src="img/logo-mathcore.png" alt="Emblema MathCore Fracciones">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">MathCore <span class="text-gold">Fracciones</span></span>
+                    <span class="brand-subtitle">PLATAFORMA ACADÉMICA FORMAL</span>
+                </div>
+            </a>
+
+            <!-- Botón Hamburguesa (Móvil) -->
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú de navegación">
+                ☰
+            </button>
+
+            <!-- Menú de Navegación Principal -->
+            <nav id="nav-menu" class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="conceptos1.html" class="nav-link">Conceptos básicos I</a>
+                <a href="conceptos2.html" class="nav-link active">Conceptos Básicos II</a>
+                <a href="operaciones.html" class="nav-link">Operaciones</a>
+                <a href="autoevaluacion.html" class="nav-link">Autoevaluación</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main class="container main-wrapper">
+
+        <!-- ENCABEZADO DEL MÓDULO -->
+        <div class="module-header">
+            <span class="module-tag">📘 MÓDULO TEÓRICO 02</span>
+            <h1 class="module-title">Tipos y Clasificación de Fracciones</h1>
+            <p class="module-desc">Conoce en detalle las diferentes clases de fracciones según sus valores, relación entre numeradores y denominadores, y características de grupo.</p>
+        </div>
+
+        <!-- INTRODUCCIÓN GENERAL -->
+        <section class="card-relief intro-card">
+            <div class="flex items-center gap-4">
+                <div class="icon-badge">✨</div>
+                <div>
+                    <h2>Clasificación General</h2>
+                    <p>Las fracciones se pueden agrupar de diversas maneras para facilitar su comprensión, comparación y resolución en problemas matemáticos cotidianos y escolares.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRID DE TIPOS DE FRACCIONES (7 CLASIFICACIONES) -->
+        <div class="fractions-grid">
+
+            <!-- 1. Fracciones Propias -->
+            <article class="card-relief fraction-card">
+                <div class="card-header-mini">
+                    <span class="badge-type">01</span>
+                    <h3>Fracciones Propias</h3>
+                </div>
+                <p class="fraction-desc">
+                    Son aquellas donde el <strong>numerador es menor que el denominador</strong>. Su valor numérico es siempre menor que la unidad (1).
+                </p>
+                <div class="fraction-example-box">
+                    <span class="math-code">3 / 5</span>
+                    <span class="example-note">Representa menos de un entero completo.</span>
+                </div>
+            </article>
+
+            <!-- 2. Fracciones Impropias -->
+            <article class="card-relief fraction-card">
+                <div class="card-header-mini">
+                    <span class="badge-type">02</span>
+                    <h3>Fracciones Impropias</h3>
+                </div>
+                <p class="fraction-desc">
+                    Son aquellas donde el <strong>numerador es mayor o igual que el denominador</strong>. Su valor es igual o mayor que la unidad.
+                </p>
+                <div class="fraction-example-box">
+                    <span class="math-code">7 / 4</span>
+                    <span class="example-note">Representa más de un entero completo.</span>
+                </div>
+            </article>
+
+            <!-- 3. Fracciones Mixtas -->
+            <article class="card-relief fraction-card">
+                <div class="card-header-mini">
+                    <span class="badge-type">03</span>
+                    <h3>Fracciones Mixtas</h3>
+                </div>
+                <p class="fraction-desc">
+                    Están compuestas por un <strong>número entero y una fracción propia</strong> combinados. Equivalen a una fracción impropia.
+                </p>
+                <div class="fraction-example-box">
+                    <span class="math-code">2 3/4</span>
+                    <span class="example-note">Dos enteros y tres cuartos.</span>
+                </div>
+            </article>
+
+            <!-- 4. Fracciones Irreductibles -->
+            <article class="card-relief fraction-card">
+                <div class="card-header-mini">
+                    <span class="badge-type">04</span>
+                    <h3>Fracciones Irreductibles</h3>
+                </div>
+                <p class="fraction-desc">
+                    Son aquellas que <strong>no se pueden simplificar más</strong>, ya que su numerador y denominador no tienen divisores comunes aparte del 1.
+                </p>
+                <div class="fraction-example-box">
+                    <span class="math-code">2 / 3</span>
+                    <span class="example-note">Mínima expresión posible.</span>
+                </div>
+            </article>
+
+            <!-- 5. Fracciones Equivalentes -->
+            <article class="card-relief fraction-card">
+                <div class="card-header-mini">
+                    <span class="badge-type">05</span>
+                    <h3>Fracciones Equivalentes</h3>
+                </div>
+                <p class="fraction-desc">
+                    Son fracciones que tienen diferente apariencia numérica pero <strong>representan exactamente la misma cantidad</strong> o porción.
+                </p>
+                <div class="fraction-example-box">
+                    <span class="math-code">1/2 = 2/4 = 4/8</span>
+                    <span class="example-note">Tienen el mismo valor real.</span>
+                </div>
+            </article>
+
+            <!-- 6. Fracciones Homogéneas -->
+            <article class="card-relief fraction-card">
+                <div class="card-header-mini">
+                    <span class="badge-type">06</span>
+                    <h3>Fracciones Homogéneas</h3>
+                </div>
+                <p class="fraction-desc">
+                    Conjunto de dos o más fracciones que <strong>comparten exactamente el mismo denominador</strong>, lo que facilita su suma y resta directa.
+                </p>
+                <div class="fraction-example-box">
+                    <span class="math-code">3/8 y 5/8</span>
+                    <span class="example-note">Mismo denominador (8).</span>
+                </div>
+            </article>
+
+            <!-- 7. Fracciones Heterogéneas -->
+            <article class="card-relief fraction-card fraction-card-full">
+                <div class="card-header-mini">
+                    <span class="badge-type">07</span>
+                    <h3>Fracciones Heterogéneas</h3>
+                </div>
+                <p class="fraction-desc">
+                    Conjunto de dos o más fracciones que tienen <strong>denominadores diferentes</strong>. Para operarlas se requiere hallar un denominador común.
+                </p>
+                <div class="fraction-example-box">
+                    <span class="math-code">1/3 y 2/5</span>
+                    <span class="example-note">Denominadores distintos (3 y 5).</span>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- NAVEGACIÓN INFERIOR ENTRE PÁGINAS -->
+        <div class="page-navigation">
+            <a href="conceptos1.html" class="btn-nav btn-prev">← Volver a Conceptos Básicos I</a>
+            <a href="operaciones.html" class="btn-nav btn-next">Ir a Operaciones →</a>
+        </div>
+
+    </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-main">© 2026 MathCore Fracciones — Plataforma Educativa para 5.° Grado de Primaria</p>
+            <p class="footer-sub">Desarrollado por el Grupo N° 5 | Entornos Web Adaptables (HTML5, CSS3 Flexbox & JavaScript)</p>
+        </div>
+    </footer>
+
+    <!-- Script exclusivo de Conceptos Básicos II -->
+    <script src="js/conceptos2.js"></script>
+</body>
+</html>

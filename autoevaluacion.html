@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoevaluación y Práctica | MathCore Fracciones</title>
+    <!-- Tipografías académicas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos exclusiva de Autoevaluación -->
+    <link rel="stylesheet" href="css/autoevaluacion.css">
+</head>
+<body>
+
+    <!-- ================= CABECERA / NAVEGACIÓN ================= -->
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="brand">
+                <div class="brand-logo-box">
+                    <img src="img/logo-mathcore.png" alt="Emblema MathCore Fracciones">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">MathCore <span class="text-gold">Fracciones</span></span>
+                    <span class="brand-subtitle">PLATAFORMA ACADÉMICA FORMAL</span>
+                </div>
+            </a>
+
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú de navegación">☰</button>
+
+            <nav id="nav-menu" class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="conceptos1.html" class="nav-link">Conceptos básicos I</a>
+                <a href="conceptos2.html" class="nav-link">Conceptos Básicos II</a>
+                <a href="operaciones.html" class="nav-link">Operaciones</a>
+                <a href="autoevaluacion.html" class="nav-link active">Autoevaluación</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main class="container main-wrapper">
+
+        <!-- ENCABEZADO DEL MÓDULO -->
+        <div class="module-header flex-between-center">
+            <div>
+                <span class="module-tag">📝 MÓDULO DE EVALUACIÓN 04</span>
+                <h1 class="module-title">Autoevaluación y Ficha de Práctica</h1>
+                <p class="module-desc">Comprueba tus conocimientos resolviendo el cuestionario interactivo por niveles y descarga la ficha oficial en PDF con ejercicios gráficos.</p>
+            </div>
+            <!-- Botón de Descarga del PDF con ejercicios gráficos -->
+            <a href="ficha_trabajo_fracciones.pdf" download class="btn-download-pdf" aria-label="Descargar ficha de ejercicios en PDF">
+                📥 Descargar Ficha de Práctica (PDF)
+            </a>
+        </div>
+
+        <div class="eval-grid">
+            <!-- COLUMNA IZQUIERDA: DATOS Y CONTACTO -->
+            <div class="card-relief contact-card">
+                <div class="card-header-mini">
+                    <span class="badge-type">👤</span>
+                    <h3>Datos del Estudiante</h3>
+                </div>
+                <p class="card-sub-desc">Registro para guardar tu reporte académico personal.</p>
+
+                <form id="contact-form" class="student-form">
+                    <div class="form-group">
+                        <label for="form-name">Nombre:</label>
+                        <input type="text" id="form-name" required placeholder="Escribe tu nombre completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-email">Correo electrónico:</label>
+                        <input type="email" id="form-email" required placeholder="ejemplo@correo.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-question">¿Cuál es el numerador de 7/9?</label>
+                        <select id="form-question">
+                            <option value="" disabled selected>Selecciona una respuesta</option>
+                            <option value="7">7</option>
+                            <option value="9">9</option>
+                            <option value="16">16</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-comment">¿Tienes alguna duda o comentario?</label>
+                        <textarea id="form-comment" rows="3" placeholder="Escribe aquí tu duda o comentario"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Enviar Reporte</button>
+                        <button type="button" id="btn-clear" class="btn-clear">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- COLUMNA DERECHA: CUESTIONARIO INTERACTIVO -->
+            <div class="card-relief quiz-main-card">
+                <div class="quiz-top-bar">
+                    <div>
+                        <h3>Cuestionario Académico</h3>
+                        <p class="quiz-sub">Selecciona un nivel y responde las preguntas</p>
+                    </div>
+                    <div class="level-tabs">
+                        <button type="button" onclick="setLevel('facil')" id="lvl-facil" class="lvl-btn active">Básico</button>
+                        <button type="button" onclick="setLevel('medio')" id="lvl-medio" class="lvl-btn">Intermedio</button>
+                        <button type="button" onclick="setLevel('dificil')" id="lvl-dificil" class="lvl-btn">Avanzado</button>
+                    </div>
+                </div>
+
+                <!-- Contenedor dinámico de preguntas -->
+                <div id="quiz-container" class="quiz-questions-container">
+                    <!-- Inyectado vía JS -->
+                </div>
+
+                <div class="quiz-footer-actions">
+                    <button type="button" id="btn-evaluate" class="btn-evaluate">Evaluación y Retroalimentación 📊</button>
+                    <button type="button" id="btn-reset" class="btn-reset-quiz">Reiniciar Cuestionario</button>
+                </div>
+
+                <!-- Panel de Retroalimentación -->
+                <div id="feedback-panel" class="feedback-panel hidden">
+                    <div class="feedback-header">
+                        <span id="feedback-icon" class="feedback-icon">🏆</span>
+                        <div>
+                            <h4 id="feedback-title">Reporte de Evaluación</h4>
+                            <p id="feedback-score" class="feedback-score-text">Puntaje: 0 / 5 (0%)</p>
+                        </div>
+                    </div>
+                    <div id="feedback-message" class="feedback-body">
+                        <!-- Mensajes detallados -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVEGACIÓN INFERIOR -->
+        <div class="page-navigation">
+            <a href="operaciones.html" class="btn-nav btn-prev">← Volver a Operaciones</a>
+            <a href="index.html" class="btn-nav btn-next">Ir al Inicio 🏠</a>
+        </div>
+
+    </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-main">© 2026 MathCore Fracciones — Plataforma Educativa para 5.° Grado de Primaria</p>
+            <p class="footer-sub">Desarrollado por el Grupo N° 5 | Entornos Web Adaptables (HTML5, CSS3 Flexbox & JavaScript)</p>
+        </div>
+    </footer>
+
+    <!-- Script exclusivo de Autoevaluación -->
+    <script src="js/autoevaluacion.js"></script>
+</body>
+</html>

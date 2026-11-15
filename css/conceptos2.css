@@ -1,0 +1,419 @@
+/* ================= VARIABLES INSTITUCIONALES ================= */
+:root {
+    --navy-950: #0a1728;
+    --navy-900: #0F2137;
+    --navy-800: #1b2a4a;
+    --gold: #D4AC0D;
+    --gold-light: #F7DC6F;
+    --cobalt: #2563eb;
+    --bg-page: #f1f5f9;
+    --text-main: #1e293b;
+    --text-muted: #475569;
+    --white: #ffffff;
+    --shadow-relief: 0 10px 30px -5px rgba(15, 33, 55, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 18px 35px -8px rgba(15, 33, 55, 0.13);
+}
+
+/* ================= RESET Y BASE ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================= CABECERA Y MENÚ (FLEXBOX) ================= */
+.navbar {
+    background-color: var(--navy-900);
+    border-bottom: 2px solid rgba(212, 172, 13, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.brand-logo-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--navy-950);
+    border: 1.5px solid rgba(212, 172, 13, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+}
+
+.brand-logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.text-gold {
+    color: var(--gold);
+    font-weight: 400;
+}
+
+.brand-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    color: #94a3b8;
+    font-weight: 700;
+    margin-top: 3px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(10, 23, 40, 0.65);
+    padding: 6px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 9px 14px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link.active {
+    background-color: var(--gold);
+    color: var(--navy-950);
+    box-shadow: 0 0 15px rgba(212, 172, 13, 0.4);
+}
+
+.menu-toggle {
+    display: none;
+    background: var(--navy-800);
+    color: var(--gold);
+    border: 1px solid rgba(212, 172, 13, 0.4);
+    font-size: 1.4rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ================= ENCABEZADO Y CONTENEDOR ================= */
+.main-wrapper {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.module-header {
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 20px;
+}
+
+.module-tag {
+    display: inline-block;
+    color: var(--gold);
+    background-color: var(--navy-900);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 5px 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.module-title {
+    font-size: 2.1rem;
+    font-weight: 900;
+    color: var(--navy-900);
+    letter-spacing: -0.02em;
+}
+
+.module-desc {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    margin-top: 4px;
+}
+
+/* ================= TARJETAS EN ALTO RELIEVE ================= */
+.card-relief {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    box-shadow: var(--shadow-relief);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.card-relief:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.intro-card {
+    background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+    color: var(--white);
+    border: 1px solid rgba(212, 172, 13, 0.3);
+}
+
+.intro-card h2 {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.intro-card p {
+    color: #cbd5e1;
+    font-size: 0.92rem;
+}
+
+.icon-badge {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(212, 172, 13, 0.2);
+    color: var(--gold);
+    border: 1px solid rgba(212, 172, 13, 0.4);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+/* ================= GRID DE TIPOS DE FRACCIONES ================= */
+.fractions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 22px;
+}
+
+.fraction-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fraction-card-full {
+    grid-column: 1 / -1;
+}
+
+.card-header-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 12px;
+}
+
+.badge-type {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--navy-900);
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 0.85rem;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.card-header-mini h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--navy-900);
+}
+
+.fraction-desc {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.fraction-example-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 12px 16px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.math-code {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--navy-900);
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.example-note {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-align: right;
+}
+
+/* ================= BOTONES NAVEGACIÓN INFERIOR ================= */
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-top: 10px;
+}
+
+.btn-nav {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 13px 22px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.btn-prev {
+    background-color: var(--white);
+    color: var(--navy-900);
+    border: 1.5px solid #cbd5e1;
+}
+
+.btn-prev:hover {
+    background-color: #e2e8f0;
+}
+
+.btn-next {
+    background-color: var(--navy-900);
+    color: var(--gold);
+    box-shadow: 0 4px 14px rgba(15, 33, 55, 0.2);
+}
+
+.btn-next:hover {
+    background-color: var(--navy-800);
+    transform: translateY(-2px);
+}
+
+/* ================= PIE DE PÁGINA ================= */
+.footer {
+    background-color: var(--navy-950);
+    color: #94a3b8;
+    border-top: 2px solid rgba(212, 172, 13, 0.25);
+    padding: 26px 0;
+    text-align: center;
+}
+
+.footer-main {
+    color: #e2e8f0;
+    font-weight: 700;
+    font-size: 0.88rem;
+    margin-bottom: 4px;
+}
+
+.footer-sub {
+    font-size: 0.78rem;
+}
+
+/* ================= DISEÑO ADAPTABLE (RESPONSIVE FLEXBOX/GRID) ================= */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 12px;
+        background-color: var(--navy-950);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-link {
+        text-align: left;
+        padding: 12px 16px;
+    }
+
+    .fractions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-navigation {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+}

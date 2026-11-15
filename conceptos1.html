@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos Básicos I | MathCore Fracciones</title>
+    <!-- Tipografías académicas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos exclusiva de Conceptos Básicos I -->
+    <link rel="stylesheet" href="css/conceptos1.css">
+</head>
+<body>
+
+    <!-- ================= CABECERA / NAVEGACIÓN ================= -->
+    <header class="navbar">
+        <div class="container navbar-content">
+            <!-- Zona del Logo Institucional -->
+            <a href="index.html" class="brand">
+                <div class="brand-logo-box">
+                    <img src="img/logo-mathcore.png" alt="Emblema MathCore Fracciones">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">MathCore <span class="text-gold">Fracciones</span></span>
+                    <span class="brand-subtitle">PLATAFORMA ACADÉMICA FORMAL</span>
+                </div>
+            </a>
+
+            <!-- Botón Hamburguesa (Móvil) -->
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú de navegación">
+                ☰
+            </button>
+
+            <!-- Menú de Navegación Principal -->
+            <nav id="nav-menu" class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="conceptos1.html" class="nav-link active">Conceptos básicos I</a>
+                <a href="conceptos2.html" class="nav-link">Conceptos Básicos II</a>
+                <a href="operaciones.html" class="nav-link">Operaciones</a>
+                <a href="autoevaluacion.html" class="nav-link">Autoevaluación</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main class="container main-wrapper">
+
+        <!-- ENCABEZADO DEL MÓDULO -->
+        <div class="module-header">
+            <span class="module-tag">📖 MÓDULO TEÓRICO 01</span>
+            <h1 class="module-title">Conceptos Básicos de Fracciones</h1>
+            <p class="module-desc">Fundamentos esenciales, elementos de una fracción, operaciones básicas y propiedades matemáticas.</p>
+        </div>
+
+        <!-- TARJETA 1: ¿QUÉ ES UNA FRACCIÓN? Y PARTES -->
+        <section class="card-relief">
+            <div class="card-header">
+                <span class="icon-badge">🍕</span>
+                <div>
+                    <h2>¿Qué es una fracción?</h2>
+                    <p class="card-sub">Definición y representación de la unidad</p>
+                </div>
+            </div>
+
+            <div class="definition-grid">
+                <div class="definition-text">
+                    <p>
+                        Una <strong>fracción</strong> es una expresión matemática que representa una parte de un todo. Está formada por un <strong>numerador</strong>, ubicado en la parte superior, y un <strong>denominador</strong>, ubicado en la parte inferior.
+                    </p>
+                    <div class="example-callout">
+                        <span class="math-pill">3 / 4</span>
+                        <p>Significa que tenemos <strong>3 partes</strong> de un total de <strong>4 partes iguales</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Visualizador Gráfico Didáctico (3/4) -->
+                <div class="fraction-visual-box">
+                    <div class="visual-bar">
+                        <div class="part filled">1/4</div>
+                        <div class="part filled">1/4</div>
+                        <div class="part filled">1/4</div>
+                        <div class="part empty">1/4</div>
+                    </div>
+                    <span class="visual-caption">Representación gráfica de 3/4</span>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Partes de una fracción -->
+            <h3 class="subsection-title">Partes de una fracción</h3>
+            <div class="parts-flex">
+                <div class="part-card">
+                    <div class="part-label">Numerador</div>
+                    <p>Indica <strong>cuántas partes se toman</strong> del entero.</p>
+                </div>
+                <div class="part-card">
+                    <div class="part-label">Denominador</div>
+                    <p>Indica <strong>en cuántas partes iguales se divide</strong> el todo.</p>
+                </div>
+            </div>
+
+            <div class="example-banner">
+                <div class="fraction-display">
+                    <span class="num">5</span>
+                    <span class="bar"></span>
+                    <span class="den">8</span>
+                </div>
+                <p>
+                    <strong>Ejemplo:</strong> En la fracción <strong>5/8</strong>, el número <strong>5</strong> es el <em>numerador</em> y el número <strong>8</strong> es el <em>denominador</em>.
+                </p>
+            </div>
+        </section>
+
+        <!-- TARJETA 2: OPERACIONES CON FRACCIONES (TABLA COMPLETA) -->
+        <section class="card-relief">
+            <div class="card-header">
+                <span class="icon-badge">📊</span>
+                <div>
+                    <h2>Operaciones con fracciones</h2>
+                    <p class="card-sub">Resumen general de las cuatro operaciones fundamentales</p>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="academic-table">
+                    <thead>
+                        <tr>
+                            <th>Operación</th>
+                            <th>Ejemplo</th>
+                            <th>Explicación</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="op-name">Suma</td>
+                            <td class="math-cell">1/4 + 2/4</td>
+                            <td>Se suman los numeradores y se deja el mismo denominador.</td>
+                            <td class="result-cell">3/4</td>
+                        </tr>
+                        <tr>
+                            <td class="op-name">Resta</td>
+                            <td class="math-cell">3/5 - 1/5</td>
+                            <td>Se restan los numeradores y se deja el mismo denominador.</td>
+                            <td class="result-cell">2/5</td>
+                        </tr>
+                        <tr>
+                            <td class="op-name">Multiplicación</td>
+                            <td class="math-cell">2/3 × 3/4</td>
+                            <td>El numerador es el producto de los numeradores y el denominador el de los denominadores, se simplifica de ser posible.</td>
+                            <td class="result-cell">1/2</td>
+                        </tr>
+                        <tr>
+                            <td class="op-name">División</td>
+                            <td class="math-cell">2/3 ÷ 4/5</td>
+                            <td>La división de dos fracciones es el producto de la primera por la inversa de la segunda, se simplifica de ser posible.</td>
+                            <td class="result-cell">5/6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TARJETA 3: VIDEO DE AYUDA EMBEBIDO -->
+<section class="card-relief video-section">
+    <div class="card-header">
+        <span class="icon-badge">🎬</span>
+        <div>
+            <h2>Video de ayuda para realizar las operaciones básicas con fracciones</h2>
+            <p class="card-sub">Recurso audiovisual complementario para reforzar tu aprendizaje</p>
+        </div>
+    </div>
+
+    <div class="video-wrapper">
+        <iframe 
+            src="https://www.youtube.com/embed/FUbla-rPt3M?si=VekWNz7dm8qvkfAs" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+        <!-- TARJETA 4: ¿CÓMO RESOLVER UNA OPERACIÓN CON FRACCIONES? -->
+        <section class="card-relief">
+            <div class="card-header">
+                <span class="icon-badge">🪜</span>
+                <div>
+                    <h2>¿Cómo resolver una operación con fracciones?</h2>
+                    <p class="card-sub">Secuencia metódica de 5 pasos para resolver ejercicios</p>
+                </div>
+            </div>
+
+            <ol class="steps-list">
+                <li>
+                    <span class="step-num">1</span>
+                    <span class="step-text">Identifica el tipo de operación.</span>
+                </li>
+                <li>
+                    <span class="step-num">2</span>
+                    <span class="step-text">Observa los denominadores de las fracciones.</span>
+                </li>
+                <li>
+                    <span class="step-num">3</span>
+                    <span class="step-text">Realiza la operación correspondiente.</span>
+                </li>
+                <li>
+                    <span class="step-num">4</span>
+                    <span class="step-text">Simplifica el resultado si es posible.</span>
+                </li>
+                <li>
+                    <span class="step-num">5</span>
+                    <span class="step-text">Comprueba que el resultado sea correcto.</span>
+                </li>
+            </ol>
+        </section>
+
+        <!-- TARJETA 5: PROPIEDADES IMPORTANTES -->
+        <section class="card-relief">
+            <div class="card-header">
+                <span class="icon-badge">🛡️</span>
+                <div>
+                    <h2>Propiedades importantes</h2>
+                    <p class="card-sub">Reglas esenciales del cálculo de fracciones</p>
+                </div>
+            </div>
+
+            <div class="properties-grid">
+                <div class="prop-item">
+                    <span class="gold-bullet"></span>
+                    <p>Una fracción representa una división.</p>
+                </div>
+                <div class="prop-item">
+                    <span class="gold-bullet"></span>
+                    <p>El denominador nunca puede ser cero.</p>
+                </div>
+                <div class="prop-item">
+                    <span class="gold-bullet"></span>
+                    <p>Las fracciones pueden simplificarse.</p>
+                </div>
+                <div class="prop-item">
+                    <span class="gold-bullet"></span>
+                    <p>Dos fracciones pueden ser equivalentes aunque tengan números diferentes.</p>
+                </div>
+                <div class="prop-item prop-full">
+                    <span class="gold-bullet"></span>
+                    <p>En una multiplicación se multiplican numeradores y denominadores.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NAVEGACIÓN INFERIOR ENTRE PÁGINAS -->
+        <div class="page-navigation">
+            <a href="index.html" class="btn-nav btn-prev">← Volver a Inicio</a>
+            <a href="conceptos2.html" class="btn-nav btn-next">Ir a Conceptos Básicos II →</a>
+        </div>
+
+    </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-main">© 2026 MathCore Fracciones — Plataforma Educativa para 5.° Grado de Primaria</p>
+            <p class="footer-sub">Desarrollado por el Grupo N° 5 | Entornos Web Adaptables (HTML5, CSS3 Flexbox & JavaScript)</p>
+        </div>
+    </footer>
+
+    <!-- Script exclusivo de Conceptos Básicos I -->
+    <script src="js/conceptos1.js"></script>
+</body>
+</html>

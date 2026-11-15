@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones y Ejercicios Gráficos | MathCore Fracciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/operaciones.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="brand">
+                <div class="brand-logo-box">
+                    <img src="img/logo-mathcore.png" alt="Emblema MathCore Fracciones">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">MathCore <span class="text-gold">Fracciones</span></span>
+                    <span class="brand-subtitle">PLATAFORMA ACADÉMICA FORMAL</span>
+                </div>
+            </a>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú de navegación">☰</button>
+            <nav id="nav-menu" class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="conceptos1.html" class="nav-link">Conceptos básicos I</a>
+                <a href="conceptos2.html" class="nav-link">Conceptos Básicos II</a>
+                <a href="operaciones.html" class="nav-link active">Operaciones</a>
+                <a href="autoevaluacion.html" class="nav-link">Autoevaluación</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-wrapper">
+        <div class="module-header">
+            <span class="module-tag">⚙️ MÓDULO PRÁCTICO 03</span>
+            <h1 class="module-title">Operaciones, Conversiones y Ejercicios Resueltos</h1>
+            <p class="module-desc">Explora nuestro simulador interactivo y estudia 9 ejercicios resueltos paso a paso con gráficos explicativos.</p>
+        </div>
+
+        <!-- SIMULADOR INTERACTIVO -->
+        <section class="card-relief simulator-card">
+            <div class="card-header">
+                <span class="icon-badge">🧮</span>
+                <div>
+                    <h2>Simulador Interactivo de Operaciones</h2>
+                    <p class="card-sub">Modifica los valores para observar el procedimiento y el resultado simplificado en tiempo real</p>
+                </div>
+            </div>
+
+            <div class="simulator-grid">
+                <div class="sim-controls">
+                    <div class="fractions-inputs">
+                        <div class="frac-box">
+                            <label>Fracción A</label>
+                            <div class="frac-inputs-row">
+                                <input type="number" id="numA" value="1" min="1" max="50">
+                                <span>/</span>
+                                <input type="number" id="denA" value="4" min="1" max="50">
+                            </div>
+                        </div>
+
+                        <div class="op-select-box">
+                            <label>Operación</label>
+                            <select id="opType">
+                                <option value="+">Suma (+)</option>
+                                <option value="-">Resta (-)</option>
+                                <option value="*">Multiplicación (×)</option>
+                                <option value="/">División (÷)</option>
+                            </select>
+                        </div>
+
+                        <div class="frac-box">
+                            <label>Fracción B</label>
+                            <div class="frac-inputs-row">
+                                <input type="number" id="numB" value="2" min="1" max="50">
+                                <span>/</span>
+                                <input type="number" id="denB" value="4" min="1" max="50">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sim-result-panel">
+                    <span class="res-label">RESULTADO SIMPLIFICADO</span>
+                    <div id="calc-result" class="res-number">3 / 4</div>
+                    <div id="calc-step" class="res-step">Procedimiento en tiempo real...</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider-title">
+            <h2>Ejercicios Resueltos con Representación Gráfica</h2>
+            <p>Analiza visualmente cómo se comportan las fracciones en cada operación y transformación.</p>
+        </div>
+
+        <!-- EJERCICIO 1 -->
+        <article class="card-relief ejercicio-card">
+            <span class="etiqueta suma">Ejercicio 1: Suma de fracciones</span>
+            <h3>Calcula: <strong>1/4 + 2/4</strong></h3>
+            <div class="pasos-resolucion">
+                <p><strong>Paso 1:</strong> Como los denominadores son iguales (4), sumamos directamente los numeradores: <em>1 + 2 = 3</em>.</p>
+                <p><strong>Paso 2:</strong> Conservamos el mismo denominador. El resultado final es <strong>3/4</strong>.</p>
+            </div>
+            <div class="contenedor-grafico">
+                <div class="grafico-item">
+                    <svg width="85" height="85" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/><path d="M50 50 L50 5 A45 45 0 0 1 95 50 Z" fill="#0F2137"/></svg>
+                    <span style="color:#0F2137; font-weight:700;">1/4</span>
+                </div>
+                <span class="signo">+</span>
+                <div class="grafico-item">
+                    <svg width="85" height="85" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/><path d="M50 50 L50 5 A45 45 0 0 1 95 50 Z" fill="#0F2137"/><path d="M50 50 L95 50 A45 45 0 0 1 50 95 Z" fill="#0F2137"/></svg>
+                    <span style="color:#0F2137; font-weight:700;">2/4</span>
+                </div>
+                <span class="signo">=</span>
+                <div class="grafico-item">
+                    <svg width="85" height="85" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/><path d="M50 50 L50 5 A45 45 0 0 1 95 50 Z" fill="#D4AC0D"/><path d="M50 50 L95 50 A45 45 0 0 1 50 95 Z" fill="#D4AC0D"/><path d="M50 50 L50 95 A45 45 0 0 1 5 50 Z" fill="#D4AC0D"/></svg>
+                    <span class="resultado-text" style="background-color: #0F2137; color: #D4AC0D; padding: 4px 10px; border-radius: 6px;">3/4</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- EJERCICIO 2 -->
+        <article class="card-relief ejercicio-card">
+            <span class="etiqueta resta">Ejercicio 2: Resta de fracciones</span>
+            <h3>Calcula: <strong>5/6 - 2/6</strong></h3>
+            <div class="pasos-resolucion">
+                <p><strong>Paso 1:</strong> Restamos los numeradores manteniendo el denominador común: <em>5 - 2 = 3</em>.</p>
+                <p><strong>Paso 2:</strong> Obtenemos 3/6. Simplificando (dividiendo entre 3), el resultado es <strong>1/2</strong>.</p>
+            </div>
+            <div class="contenedor-grafico">
+                <div class="grafico-item">
+                    <svg width="85" height="85" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#0F2137" stroke="#1e293b" stroke-width="2"/><path d="M50 50 L50 5 A45 45 0 0 1 88.9 27.5 Z" fill="#e2e8f0"/></svg>
+                    <span style="color:#0F2137; font-weight:700;">5/6</span>
+                </div>
+                <span class="signo">-</span>
+                <div class="grafico-item">
+                    <svg width="85" height="85" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/><path d="M50 50 L50 5 A45 45 0 0 1 88.9 27.5 Z" fill="#2563eb"/><path d="M50 50 L88.9 27.5 A45 45 0 0 1 88.9 72.5 Z" fill="#2563eb"/></svg>
+                    <span style="color:#0F2137; font-weight:700;">2/6</span>
+                </div>
+                <span class="signo">=</span>
+                <div class="grafico-item">
+                    <svg width="85" height="85" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/><path d="M50 50 L50 5 A45 45 0 0 1 88.9 27.5 Z" fill="#D4AC0D"/><path d="M50 50 L88.9 27.5 A45 45 0 0 1 88.9 72.5 Z" fill="#D4AC0D"/><path d="M50 50 L88.9 72.5 A45 45 0 0 1 50 95 Z" fill="#D4AC0D"/></svg>
+                    <span class="resultado-text" style="background-color: #0F2137; color: #D4AC0D; padding: 4px 10px; border-radius: 6px;">3/6 = 1/2</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- EJERCICIO 3 -->
+        <article class="card-relief ejercicio-card">
+            <span class="etiqueta multiplicacion">Ejercicio 3: Multiplicación</span>
+            <h3>Calcula: <strong>2/3 × 3/4</strong></h3>
+            <div class="pasos-resolucion">
+                <p><strong>Paso 1:</strong> Multiplicamos numeradores en línea recta: <em>2 × 3 = 6</em>.</p>
+                <p><strong>Paso 2:</strong> Multiplicamos denominadores en línea recta: <em>3 × 4 = 12</em>.</p>
+                <p><strong>Paso 3:</strong> Obtenemos 6/12. Simplificando entre 6, el resultado final es <strong>1/2</strong>.</p>
+            </div>
+            <div class="contenedor-grafico">
+                <div class="grafico-item">
+                    <svg width="110" height="110" viewBox="0 0 100 100">
+                        <rect x="0" y="0" width="33.3" height="100" fill="#2563eb" opacity="0.35"/>
+                        <rect x="33.3" y="0" width="33.3" height="100" fill="#2563eb" opacity="0.35"/>
+                        <rect x="0" y="0" width="100" height="25" fill="#D4AC0D" opacity="0.4"/>
+                        <rect x="0" y="25" width="100" height="25" fill="#D4AC0D" opacity="0.4"/>
+                        <rect x="0" y="50" width="100" height="25" fill="#D4AC0D" opacity="0.4"/>
+                        <rect x="0" y="0" width="66.6" height="75" fill="#0F2137" opacity="0.8"/>
+                    </svg>
+                    <span class="resultado-text" style="background-color: #0F2137; color: #D4AC0D; padding: 4px 10px; border-radius: 6px;">6/12 = 1/2</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- EJERCICIO 4 -->
+        <article class="card-relief ejercicio-card">
+            <span class="etiqueta division">Ejercicio 4: División</span>
+            <h3>Calcula: <strong>3/4 ÷ 1/2</strong></h3>
+            <div class="pasos-resolucion">
+                <p><strong>Paso 1:</strong> Multiplicamos en cruz: <em>3 × 2 = 6</em> y <em>4 × 1 = 4</em>.</p>
+                <p><strong>Paso 2:</strong> Obtenemos 6/4. Simplificando entre 2, el resultado es <strong>3/2</strong>.</p>
+            </div>
+            <div class="contenedor-grafico">
+                <div class="barra-proporcion"><div class="barra-relleno" style="width: 75%;">3/4 partes</div></div>
+                <span class="resultado-text" style="background-color: #0F2137; color: #D4AC0D; padding: 4px 10px; border-radius: 6px;">Equivale a 3/2 (1.5)</span>
+            </div>
+        </article>
+
+        <!-- EJERCICIO 5 -->
+        <article class="card-relief ejercicio-card">
+            <span class="etiqueta combinada">Ejercicio 5: Operaciones Combinadas</span>
+            <h3>Calcula: <strong>(1/2 + 1/4) × 2/3</strong></h3>
+            <div class="pasos-resolucion">
+                <p><strong>Paso 1:</strong> Suma interna: <em>2/4 + 1/4 = 3/4</em>.</p>
+                <p><strong>Paso 2:</strong> Multiplicación: <em>(3/4) × (2/3) = 6/12</em>. Simplificado da <strong>1/2</strong>.</p>
+            </div>
+            <div class="contenedor-grafico">
+                <div class="bloque-combinado">
+                    <span class="paso-badge">1/2 + 1/4 = 3/4</span>
+                    <span class="signo">×</span>
+                    <span class="paso-badge">2/3</span>
+                    <span class="signo">=</span>
+                    <span class="paso-badge resultado">1/2</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- EJERCICIO 6 -->
+        <article class="card-relief ejercicio-card">
+            <span class="etiqueta conversion">Ejercicio 6: Impropia a Mixta</span>
+            <h3>Convierte: <strong>7/4</strong> a número mixto</h3>
+            <div class="pasos-resolucion">
+                <p><strong>Paso 1:</strong> 7 ÷ 4 = 1 entero y sobra 3. Resultado: <strong>1 3/4</strong>.</p>
+            </div>
+            <div class="contenedor-grafico">
+                <span class="resultado-text" style="background-color: #0F2137; color: #D4AC0D; padding: 4px 10px; border-radius: 6px;">7/4 = 1 3/4</span>
+            </div>
+        </article>
+
+        <!-- EJERCICIO 7 -->
+        <article class="card-relief ejercicio-card">
+            <span class="etiqueta conversion">Ejercicio 7: Mixta a Impropia</span>
+            <h3>Convierte: <strong>2 1/3</strong> a fracción impropia</h3>
+            <div class="pasos-resolucion">
+                <p><strong>Paso 1:</strong> (2 × 3) + 1 = 7. Resultado: <strong>7/3</strong>.</p>
+            </div>
+            <div class="contenedor-grafico">
+                <span class="resultado-text" style="background-color: #0F2137; color: #D4AC0D; padding: 4px 10px; border-radius: 6px;">2 1/3 = 7/3</span>
+            </div>
+        </article>
+
+        <!-- EJERCICIO 8 -->
+        <article class="card-relief ejercicio-card">
+            <span class="etiqueta equivalente">Ejercicio 8: Equivalencias</span>
+            <h3>Comprueba: <strong>1/2 = 2/4 = 4/8</strong></h3>
+            <div class="pasos-resolucion">
+                <p>Amplificamos multiplicando numerador y denominador por un mismo número.</p>
+            </div>
+            <div class="contenedor-grafico">
+                <span class="resultado-text" style="background-color: #0F2137; color: #D4AC0D; padding: 4px 10px; border-radius: 6px;">Misma porción (50%)</span>
+            </div>
+        </article>
+
+        <!-- EJERCICIO 9 -->
+        <article class="card-relief ejercicio-card">
+            <span class="etiqueta simplificacion">Ejercicio 9: Simplificación</span>
+            <h3>Simplifica: <strong>6/8</strong></h3>
+            <div class="pasos-resolucion">
+                <p>Dividimos entre 2 arriba y abajo: (6÷2) / (8÷2) = <strong>3/4</strong>.</p>
+            </div>
+            <div class="contenedor-grafico">
+                <span class="resultado-text" style="background-color: #0F2137; color: #D4AC0D; padding: 4px 10px; border-radius: 6px;">6/8 = 3/4</span>
+            </div>
+        </article>
+
+        <div class="page-navigation">
+            <a href="conceptos2.html" class="btn-nav btn-prev">← Volver a Conceptos Básicos II</a>
+            <a href="autoevaluacion.html" class="btn-nav btn-next">Ir a Autoevaluación →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-main">© 2026 MathCore Fracciones — Plataforma Educativa para 5.° Grado de Primaria</p>
+            <p class="footer-sub">Desarrollado por el Grupo N° 5 | Entornos Web Adaptables (HTML5, CSS3 Flexbox & JavaScript)</p>
+        </div>
+    </footer>
+    <script src="js/operaciones.js"></script>
+</body>
+</html>
