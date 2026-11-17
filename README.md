@@ -3,7 +3,6 @@
 <div align="center">
 
 [![GitHub Pages](https://img.shields.io/badge/website-live-success?style=for-the-badge&logo=github&logoColor=white)](https://karenstephani.github.io/mathcore/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 **Plataforma interactiva y repositorio centralizado de recursos, fórmulas y herramientas matemáticas.**
 
