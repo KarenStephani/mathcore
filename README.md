@@ -1,4 +1,3 @@
-# mathcore
 # 📐 Mathcore
 
 <div align="center">
@@ -59,6 +58,3 @@ Este proyecto ha sido desarrollado utilizando tecnologías web estándar:
 
 ---
 
-## 📄 Licencia
-
-Este proyecto se encuentra bajo los términos de la licencia [MIT](LICENSE).
